@@ -17,7 +17,7 @@
 </dependency>
 ```
 ## Adding application properties
-At the <root>/src/main/resources/application.properties
+At the root/src/main/resources/application.properties
 Add the following properties:
 ```
 spring.redis.database=0
@@ -28,7 +28,7 @@ spring.redis.username=default
 
 ## Setting up Redis template:
 At the same folder as the initial class file, create another file named "AppConfiguration.java"
-This is the standard boilerplate for Redis template:
+This is the standard boilerplate for Redis template setup:
 ```java
 package your.packagename.here;
 
