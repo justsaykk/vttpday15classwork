@@ -1,6 +1,6 @@
 # Setting up Redis
 
-## Information needed:
+## Information needed prior to setup
 1. Redis Host (a.k.a "public endpoint")
 2. Redis Port (the numbers at the end of the endpoint after the colon)
 3. Redis Database (Should be 0)
@@ -17,7 +17,7 @@
 </dependency>
 ```
 ## Adding application properties
-At the root/src/main/resources/application.properties
+At the root/src/main/resources/application.properties,</br>
 Add the following properties:
 ```
 spring.redis.database=0
@@ -27,7 +27,7 @@ spring.redis.username=default
 ```
 
 ## Setting up Redis template:
-At the same folder as the initial class file, create another file named "AppConfiguration.java"
+At the same folder as the initial class file, create another file named "AppConfiguration.java". </br>
 This is the standard boilerplate for Redis template setup:
 ```java
 package your.packagename.here;
@@ -56,9 +56,9 @@ public class AppConfiguration {
     private String redisUserName;
 
     /*
-     * For redis password, use the command:
+     * For Redis password, use this CLI command:
      * export REDIS_PASSWORD="<password here>"
-     * at the root folder before performing ./mvnw package & ./mvnw spring-boot:run
+     * at the root folder before performing ./mvnw package and/or ./mvnw spring-boot:run
      */
     @Value("${REDIS_PASSWORD}")
     private String redisPassword;
@@ -89,5 +89,4 @@ public class AppConfiguration {
         return redisTemplate;
     }
 }
-
 ```
