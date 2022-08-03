@@ -90,3 +90,17 @@ public class AppConfiguration {
     }
 }
 ```
+
+# Redis CLI Commands
+To connect to redis
+
+`~$ redis-cli -h <hostname> -p <port> --user <username> --pass <password>`
+
+To select database (after connecting)
+
+`~$ select <database number>`
+> For free users, you only have 1 database and the no. is 0. 
+> Therefore the code is:
+> `~$ select 0`
+
+
