@@ -63,7 +63,7 @@ public class AppConfiguration {
     @Value("${REDIS_PASSWORD}")
     private String redisPassword;
 
-    @Bean
+    @Bean("repo")
     public RedisTemplate initRedisTemplate() {
         // 1st Step: Config Redis Database
         RedisStandaloneConfiguration redisConfig = new RedisStandaloneConfiguration();
